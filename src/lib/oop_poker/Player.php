@@ -1,5 +1,7 @@
 <?php
 
+require_once('Deck.php');
+
 class Player
 {
     public function __construct(private string $name)
@@ -7,8 +9,8 @@ class Player
         
     }
 
-    public function drawCards()
+    public function drawCards(Deck $deck, int $drawNum)
     {
-        return ['H10', 'Dd10'];
+        return $deck->drawCards($drawNum);
     }
 }

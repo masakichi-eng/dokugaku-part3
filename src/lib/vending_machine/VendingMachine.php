@@ -20,7 +20,7 @@ class VendingMachine
         $price = $item->getPrice();
         if ($this->depositedCoin >= $price) {
             $this->depositedCoin -= $price;
-            return $item->getName;
+            return $item->getName();
         } else {
             return '';
         }
